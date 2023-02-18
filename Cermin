@@ -1,1 +1,32 @@
-ah ah
+import pygame
+import math
+
+# inisialisasi pygame
+pygame.init()
+
+# ukuran layar
+screen_width = 640
+screen_height = 480
+
+# warna
+black = (0, 0, 0)
+white = (244, 244, 244)
+
+# buat layar
+screen = pygame.display.set_mode((screen_width, screen_height))
+
+# gambar garis horizontal
+pygame.draw.line(screen, white, (0, screen_height//2), (screen_width, screen_height//2), 1)
+
+# gambar garis vertikal
+pygame.draw.line(screen, white, (screen_width//2, 0), (screen_width//2, screen_height), 1)
+
+# update layar
+pygame.display.update()
+
+# loop utama
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
